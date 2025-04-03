@@ -25,7 +25,7 @@ body {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 70vh;
+    min-height: 45vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -34,7 +34,7 @@ body {
 .header-content {
     text-align: center;
     width: 100%;
-    padding-top: 120px;
+    padding-top: 45px;
 }
 
 .header-content h1 {
@@ -69,30 +69,181 @@ body {
     transform: scale(1.05);
 }
 
+.carousel-container {
+    position: relative;
+    width: 100%;
+    padding-top: 45px;
+    margin: 0;
+    overflow: hidden;
+    max-height: 600px;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    min-width: 100%;
+    object-fit: cover;
+    height: 600px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: white;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 10;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.carousel-btn:hover::after {
+    transform: scale(1);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background: #ce967b;
+}
+
+.info-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.info-box {
+    flex: 1;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    border: 1px solid rgba(206, 150, 123, 0.3);
+    transition: all 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-box h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #272727;
+    line-height: 1.6;
+    padding: 0;
+}
+
 .menu {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px 5%; 
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-    width: 100%;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.menu.container {
+    max-width: none;
+    padding: 15px 5%;
 }
 
 .menu.scrolled {
     background-color: rgba(0, 0, 0, 0.9);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 5%;
 }
 
 .logo {
+    display: flex;
+    flex-direction: column;
     color: #FFFDFC;
-    font-size: 25px;
     font-weight: 800;
+    text-decoration: none;
+}
+
+.logo-main {
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.logo-sub {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar ul {
@@ -171,8 +322,6 @@ body {
     text-align: center;
 }
 
-
-
 .coffee-content h2 {
     font-size: 55px;
     line-height: 70px;
@@ -209,11 +358,10 @@ body {
 }
 
 .services {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/unidad.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/unidad.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     display: flex;
     position: relative;
     align-items: center;
@@ -300,6 +448,21 @@ body {
     padding: 0 20px;
 }
 
+.task-section:target .section-divider .divider-text {
+    animation: highlightDivider 1.5s ease;
+}
+
+@keyframes highlightDivider {
+    0% { 
+        color: #b87c63;
+        font-size: 16px;
+    }
+    100% { 
+        color: #ce967b;
+        font-size: 14px;
+    }
+}
+
 .tarea-content h2 {
     font-size: 30px;
     line-height: 40px;
@@ -331,10 +494,10 @@ body {
 .section-divider {
     position: relative;
     height: 1px;
-    background-color: rgba(66, 51, 43, 0.3);
+    background-color: rgba(206, 150, 123, 0.5);
     margin: 60px auto;
     text-align: center;
-    width: 80%;
+    scroll-margin-top: 80px;
 }
 
 .divider-text {
@@ -342,7 +505,7 @@ body {
     top: -12px;
     background: #f4f4f4;
     padding: 0 20px;
-    color: #27140a;
+    color: #ce967b;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
@@ -525,19 +688,51 @@ body {
 }
 
 .footer {
-    padding: 100px 0;
+    padding: 50px 0 20px;
     background-color: #000000;
+    color: #c5c5c5;
+    font-size: 14px;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
-.link h3 {
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
     font-size: 18px;
     color: #f9fafc;
     margin-bottom: 15px;
+}
+
+.footer-section ul {
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #c5c5c5;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-section a:hover {
+    color: #ce967b;
 }
 
 .link a {
@@ -549,11 +744,19 @@ body {
 
 @media (max-width: 991px) {
     .menu {
-        padding: 30px;
+        padding: 15px 5% !important;
     }
 
     .menu label {
         display: initial;
+    }
+
+    .logo-main {
+        font-size: 18px;
+    }
+
+    .logo-sub {
+        font-size: 12px;
     }
 
     .navbar {
@@ -563,6 +766,7 @@ body {
         right: 0;
         background-color: rgba(0, 0, 0, 0.9);
         display: none;
+        padding: 0 5%;
     }
 
     .navbar ul {
@@ -608,6 +812,21 @@ body {
 
     .header-content p {
         padding: 0;
+    }
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+    }
+
+    .info-boxes {
+        flex-direction: column;
+    }
+    
+    .info-box {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .coffee {
@@ -730,6 +949,10 @@ body {
 
     .services-1 {
         margin-bottom: 25px;
+    }
+
+    .footer-section {
+        width: 100%;
     }
 
 }
