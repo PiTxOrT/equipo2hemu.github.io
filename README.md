@@ -1,1 +1,1 @@
-no tomar mucha importancia a este proyecto, es un proyecto de materia que se ira cambiando conforme el semestre y seguramente olvidado acabando el mismo.
+if u by any chance you found this, its a little project where we are gonna create a web site with stuff of the signature, if u saw something wrong or anything u can help with a commentary, even if is not an official page we're trying to do our best.
