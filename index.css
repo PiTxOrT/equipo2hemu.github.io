@@ -687,6 +687,63 @@ body {
     margin-bottom: 20px;
 }
 
+.tarea-4-container,
+.tarea-5-container,
+.tarea-6-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.tarea-4-text,
+.tarea-5-text,
+.tarea-6-text {
+    width: 60%;
+}
+
+.tarea-4-images,
+.tarea-5-images,
+.tarea-6-images {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarea-4-images img,
+.tarea-5-images img,
+.tarea-6-images img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+}
+
+.video-caption {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+}
+
 .footer {
     padding: 50px 0 20px;
     background-color: #000000;
@@ -932,6 +989,25 @@ body {
 
     .tarea-3-3-images {
         width: 100%;
+    }
+
+    .tarea-4-container,
+    .tarea-5-container,
+    .tarea-6-container {
+        flex-direction: column;
+    }
+
+    .tarea-4-text,
+    .tarea-5-text,
+    .tarea-6-text,
+    .tarea-4-images,
+    .tarea-5-images,
+    .tarea-6-images {
+        width: 100%;
+    }
+
+    .tarea-5-container {
+        flex-direction: column-reverse;
     }
 
     .services {
