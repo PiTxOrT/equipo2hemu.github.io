@@ -115,3 +115,69 @@ window.addEventListener('resize', () => {
     slide.style.transform = `translateX(${-newSize * counter}px)`;
 });
 });
+
+/* en teoria esto debe servir para que al momento de scrollear salga que tarea es y salga fijado */
+
+function updateCurrentTaskIndicator() {
+    const sections = document.querySelectorAll('[id^="tarea-"]');
+    const menuHeight = document.querySelector('.menu').offsetHeight;
+    const indicator = document.querySelector('.current-task-indicator');
+    
+    if (!indicator) return;
+    
+    let currentTask = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - menuHeight - 20;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            const dividerText = section.querySelector('.divider-text');
+            if (dividerText) {
+                currentTask = dividerText.textContent;
+            } else {
+                const sectionId = section.id;
+                const h2 = section.querySelector('h2');
+                
+                if (sectionId) {
+                    currentTask = "Tarea " + sectionId.replace('tarea-', '').replace(/-/g, '.');
+                }
+            }
+        }
+    });
+    
+    if (currentTask) {
+        indicator.textContent = currentTask;
+        indicator.style.display = 'block';
+    } else {
+        indicator.style.display = 'none';
+    }
+}
+
+window.addEventListener('scroll', function() {
+    var header = document.querySelector("header");
+    var menu = document.querySelector(".menu");
+    if (window.scrollY > 50) {
+        header.classList.add("abajo");
+        menu.classList.add("scrolled");
+    } else {
+        header.classList.remove("abajo");
+        menu.classList.remove("scrolled");
+    }
+    
+    updateCurrentTaskIndicator();
+});
+
+/* llama a la funcion */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Crea el elemento indicador si no existe
+    if (!document.querySelector('.current-task-indicator')) {
+        const indicator = document.createElement('div');
+        indicator.className = 'current-task-indicator';
+        indicator.style.display = 'none';
+        document.body.appendChild(indicator);
+    }
+    
+    updateCurrentTaskIndicator();
+});
