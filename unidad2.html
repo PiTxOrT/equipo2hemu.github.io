@@ -37,9 +37,10 @@
                         <ul class="submenu">
                             <li><a href="unidad2.html#tarea-7">T7-Antecedentes</a></li>
                             <li><a href="unidad2.html#tarea-8">T8-Entornos</a></li>
+                            <li><a href="unidad2.html#tarea-9">T9-Drllo MM</a></li>
                         </ul>
                     </li>
-                    <li><a href="#unidad3">U3-Desarrollo e integracion</a></li>
+                    <li><a href="#unidad3">U3-Drllo e integracion</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                 </ul>
             </nav>
@@ -346,34 +347,32 @@
             <div class="tarea-text">
                 <h2>Clasificación de los entornos virtuales</h2>
                 
-                <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px;">
-                    <div class="content-item">
-                        <div class="classification-card">
-                            <h3><span class="classification-number">1</span> No inmersivos</h3>
-                            <p>Se accede desde pantallas tradicionales (computadora o móvil), como los videojuegos o simuladores simples.</p>
-                            <div class="tarea-images">
-                                <img src="images/no.png" alt="Entorno no inmersivo">
-                            </div>
+                <div class="classification-row left-aligned">
+                    <div class="classification-card">
+                        <h3><span class="classification-number">1</span> No inmersivos</h3>
+                        <p>Se accede desde pantallas tradicionales (computadora o móvil), como los videojuegos o simuladores simples.</p>
+                        <div class="tarea-images">
+                            <img src="images/no.png" alt="Entorno no inmersivo">
                         </div>
                     </div>
+                </div>
      
-                    <div class="content-item">
-                        <div class="classification-card">
-                            <h3><span class="classification-number">2</span> Semi-inmersivos</h3>
-                            <p>Incluyen pantallas envolventes o entornos interactivos como CAVEs (Cave Automatic Virtual Environment).</p>
-                            <div class="tarea-images">
-                                <img src="images/si.png" alt="Entorno semi-inmersivo">
-                            </div>
+                    <div class="classification-row right-aligned">
+                    <div class="classification-card">
+                        <h3><span class="classification-number">2</span> Semi-inmersivos</h3>
+                        <p>Incluyen pantallas envolventes o entornos interactivos como CAVEs (Cave Automatic Virtual Environment).</p>
+                        <div class="tarea-images">
+                            <img src="images/si.png" alt="Entorno semi-inmersivo">
                         </div>
                     </div>
+                </div>
     
-                    <div class="content-item">
-                        <div class="classification-card">
-                            <h3><span class="classification-number">3</span> Inmersivos</h3>
-                            <p>Utilizan visores de realidad virtual, seguimiento de movimiento y sonido envolvente para crear una experiencia completa.</p>
-                            <div class="tarea-images">
-                                <img src="images/aja.jpg" alt="Entorno inmersivo">
-                            </div>
+                    <div class="classification-row left-aligned">
+                    <div class="classification-card">
+                        <h3><span class="classification-number">3</span> Inmersivos</h3>
+                        <p>Utilizan visores de realidad virtual, seguimiento de movimiento y sonido envolvente para crear una experiencia completa.</p>
+                        <div class="tarea-images">
+                            <img src="images/aja.jpg" alt="Entorno inmersivo">
                         </div>
                     </div>
                 </div>
@@ -502,24 +501,42 @@
                 </div>
          
                 <div class="software-section">
-                    <h3>2. Modelado y animación 3D</h3>
-                    <div class="content-grid" style="grid-template-columns: repeat(2, 1fr); gap: 25px; margin-top: 20px;">
-                        <div class="software-card">
-                            <h4>Blender</h4>
-                            <p>Software gratuito para modelado, animación y renderizado.</p>
-                            <div class="tarea-images">
-                                <img src="images/blender.png" alt="Interfaz Blender">
-                            </div>
-                        </div>
-                        <div class="software-card">
-                            <h4>Autodesk Maya y 3ds Max</h4>
-                            <p>Estándar de la industria para producción profesional.</p>
-                            <div class="tarea-images">
-                                <img src="images/maya.png" alt="Ejemplo Maya">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <h3>2. Modelado y animación 3D</h3>
+    <div class="software-grid">
+
+        <div class="software-card">
+            <div>
+                <h4>Blender</h4>
+                <p>Software gratuito para modelado, animación y renderizado con:</p>
+                <ul class="tool-features">
+                    <li>Modelado poligonal y escultórico</li>
+                    <li>Animación y rigging avanzado</li>
+                    <li>Motor de renderizado Cycles</li>
+                    <li>Herramientas de simulación</li>
+                </ul>
+            </div>
+            <div class="tarea-images">
+                <img src="images/blender.png" alt="Interfaz Blender">
+            </div>
+        </div>
+
+        <div class="software-card">
+            <div>
+                <h4>Autodesk Maya y 3ds Max</h4>
+                <p>Estándar de la industria para producción profesional:</p>
+                <ul class="tool-features">
+                    <li>Herramientas de animación avanzada</li>
+                    <li>Sistema de partículas y dinámicas</li>
+                    <li>Integración con pipelines profesionales</li>
+                    <li>Ampliamente usado en cine AAA</li>
+                </ul>
+            </div>
+            <div class="tarea-images">
+                <img src="images/maya.png" alt="Ejemplo Maya">
+            </div>
+        </div>
+    </div>
+</div>
                 
                 <div class="software-section">
                     <h3>3. Simulación y física</h3>
@@ -537,26 +554,26 @@
                 </div>
 
                 <div class="software-section">
-                    <h3>4. Desarrollo RA/RV específico</h3>
-                    <div class="content-grid" style="grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px;">
-                        <div class="tech-pill">
-                            <img src="images/unity.png" alt="Unity XR">
-                            <span>Unity XR Toolkit</span>
-                        </div>
-                        <div class="tech-pill">
-                            <img src="images/arkit.png" alt="ARKit">
-                            <span>ARKit</span>
-                        </div>
-                        <div class="tech-pill">
-                            <img src="images/arcore.jpg" alt="ARCore">
-                            <span>ARCore</span>
-                        </div>
-                        <div class="tech-pill">
-                            <img src="images/Vuforia.png" alt="Vuforia">
-                            <span>Vuforia</span>
-                        </div>
-                    </div>
-                </div>
+    <h3>4. Desarrollo RA/RV específico</h3>
+    <div class="tech-pill-container" style="display: flex; flex-wrap: nowrap; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+        <div class="tech-pill" style="flex: 1; min-width: 0;">
+            <img src="images/unity.png" alt="Unity XR" style="width: 50px; height: 50px; object-fit: contain;">
+            <span>Unity XR Toolkit</span>
+        </div>
+        <div class="tech-pill" style="flex: 1; min-width: 0;">
+            <img src="images/arkit.png" alt="ARKit" style="width: 50px; height: 50px; object-fit: contain;">
+            <span>ARKit</span>
+        </div>
+        <div class="tech-pill" style="flex: 1; min-width: 0;">
+            <img src="images/arcore.jpg" alt="ARCore" style="width: 50px; height: 50px; object-fit: contain;">
+            <span>ARCore</span>
+        </div>
+        <div class="tech-pill" style="flex: 1; min-width: 0;">
+            <img src="images/Vuforia.png" alt="Vuforia" style="width: 50px; height: 50px; object-fit: contain;">
+            <span>Vuforia</span>
+        </div>
+    </div>
+</div>
 
                 <div class="tarea-container" style="margin-top: 40px; background-color: rgba(206, 150, 123, 0.08); padding: 20px; border-radius: 8px;">
                     <div class="tarea-text">
@@ -737,7 +754,7 @@
                 </div>
                 
                 <div class="highlight-box">
-                    <div class="highlight-icon">💡</div>
+                    <div class="highlight-icon"></div>
                     <div class="highlight-content">
                         <h4>Impacto transversal</h4>
                         <p>Estas aplicaciones demuestran cómo los entornos virtuales están transformando múltiples sectores simultáneamente, creando nuevas posibilidades en educación, salud, industria y entretenimiento.</p>
@@ -754,13 +771,11 @@
             <div class="tarea-text">
                 <h2>Motores de Videojuegos: Unity, Unreal, etc.</h2>
                 <p class="intro-text">Los motores de videojuegos son plataformas de desarrollo que permiten construir mundos virtuales interactivos, controlando elementos gráficos, físicos y lógicos del entorno.</p>
-                
-                <!-- Comparativa principal -->
+
                 <div class="engine-comparison">
-                    <!-- Unity -->
                     <div class="engine-card unity-engine">
                         <div class="engine-header">
-                            <img src="images/unity-logo.png" alt="Unity Logo" class="engine-logo">
+                            <img src="images/unity.png" alt="Unity Logo" class="engine-logo">
                             <h3>Unity</h3>
                         </div>
                         <div class="engine-details">
@@ -781,15 +796,11 @@
                                 <p><strong>Pokémon GO</strong> (RA), aplicaciones educativas interactivas</p>
                             </div>
                         </div>
-                        <div class="engine-showcase">
-                            <img src="images/unity-demo.jpg" alt="Unity Demo" class="showcase-image">
-                        </div>
                     </div>
-                    
-                    <!-- Unreal -->
+          
                     <div class="engine-card unreal-engine">
                         <div class="engine-header">
-                            <img src="images/unreal-logo.png" alt="Unreal Logo" class="engine-logo">
+                            <img src="images/unreal.png" alt="Unreal Logo" class="engine-logo">
                             <h3>Unreal Engine</h3>
                         </div>
                         <div class="engine-details">
@@ -810,20 +821,15 @@
                                 <p><strong>Fortnite</strong>, <strong>The Mandalorian</strong> (escenarios digitales en producción de cine)</p>
                             </div>
                         </div>
-                        <div class="engine-showcase">
-                            <img src="images/unreal-demo.jpg" alt="Unreal Demo" class="showcase-image">
-                        </div>
                     </div>
                 </div>
-                
-                <!-- Otros motores -->
+ 
                 <div class="other-engines">
                     <h3>Otros motores destacados</h3>
                     <div class="engine-grid">
-                        <!-- Godot -->
                         <div class="small-engine-card">
                             <div class="small-engine-header">
-                                <img src="images/godot-logo.png" alt="Godot Logo" class="small-engine-logo">
+                                <img src="images/godot.png" alt="Godot Logo" class="small-engine-logo">
                                 <h4>Godot</h4>
                             </div>
                             <ul class="engine-features">
@@ -832,11 +838,10 @@
                                 <li>Lenguaje: GDScript (similar a Python)</li>
                             </ul>
                         </div>
-                        
-                        <!-- CryEngine -->
+       
                         <div class="small-engine-card">
                             <div class="small-engine-header">
-                                <img src="images/cryengine-logo.png" alt="CryEngine Logo" class="small-engine-logo">
+                                <img src="images/cryengine.png" alt="CryEngine Logo" class="small-engine-logo">
                                 <h4>CryEngine</h4>
                             </div>
                             <ul class="engine-features">
@@ -845,11 +850,10 @@
                                 <li>Usado en juegos como Far Cry y Crysis</li>
                             </ul>
                         </div>
-                        
-                        <!-- Lumberyard -->
+
                         <div class="small-engine-card">
                             <div class="small-engine-header">
-                                <img src="images/lumberyard-logo.png" alt="Lumberyard Logo" class="small-engine-logo">
+                                <img src="images/amazon.png" alt="Lumberyard Logo" class="small-engine-logo">
                                 <h4>Amazon Lumberyard</h4>
                             </div>
                             <ul class="engine-features">
@@ -860,12 +864,275 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Nota técnica -->
+ 
                 <div class="tech-note">
-                    <div class="note-icon">⚙️</div>
+                    <div class="note-icon"></div>
                     <div class="note-content">
                         <p>La elección del motor depende del proyecto: Unity para desarrollo rápido y multiplataforma, Unreal para gráficos de alta gama, y alternativas como Godot para proyectos de código abierto o con limitaciones presupuestarias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tarea-9" class="tarea-section">
+    <div class="section-divider">
+        <span class="divider-text">Tarea 9 - Desarrollo de Herramientas Multimedia</span>
+    </div>
+    <div class="tarea-content container">
+        <div class="tarea-container">
+            <div class="tarea-text">
+                <h2>Desarrollo de las herramientas multimedia</h2>
+                
+                <div class="content-grid" style="grid-template-columns: 1fr; gap: 30px; margin-top: 30px;">
+                    <div class="content-item">
+                        <h3>Introducción</h3>
+                        <p>
+                            En la era digital, las herramientas multimedia forman parte de nuestra vida cotidiana: desde aplicaciones educativas hasta videojuegos y presentaciones interactivas. Pero, ¿qué hay detrás de su creación? El desarrollo multimedia es el proceso que hace posible que todas estas experiencias cobren vida de manera funcional, visualmente atractiva y orientada al usuario.
+                        </p>
+                        <div class="tarea-images">
+                            <img src="images/herramientas.png" alt="Herramientas multimedia cotidianas" style="margin-left: 400px;">
+                        </div>
+                    </div>
+
+                    <div class="content-item">
+                        <h3>Definición</h3>
+                        <p>
+                            El desarrollo multimedia es el proceso central en la creación de productos o servicios interactivos que integran múltiples disciplinas, como la programación, el diseño gráfico y la experiencia de usuario. Su objetivo es cumplir de forma eficaz y eficiente con los objetivos del proyecto, asegurando una alta calidad técnica, visual y funcional que responda a las necesidades del usuario final.
+                        </p>
+                        <div class="tarea-images">
+                            <img src="images/proceso.png" alt="Proceso de desarrollo multimedia" style="margin-left: 400px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tarea-9 fases del desarrollo multimedia" class="tarea-section">
+    <div class="tarea-content container">
+        <div class="tarea-container">
+            <div class="tarea-text">
+                <h2>Fases del desarrollo multimedia</h2>
+                <p>
+                    El desarrollo de una herramienta multimedia no es un proceso improvisado. Requiere una secuencia de etapas bien definidas para garantizar que el producto final sea funcional, atractivo y útil. Estas son las fases principales:
+                </p>
+
+                <div class="phases-alternate-grid">
+       
+                    <div class="classification-card">
+                        <h3><span class="classification-number">1</span> Análisis de necesidades</h3>
+                        <p>Definición de los objetivos y requisitos base del proyecto.</p>
+                        <ul class="tool-features">
+                            <li>Se identifica el público objetivo.</li>
+                            <li>Se establecen los objetivos del proyecto.</li>
+                            <li>Se analizan recursos disponibles y limitaciones técnicas.</li>
+                        </ul>
+                        <div class="tarea-images">
+                            <img src="images/analisis.jpg" alt="Análisis de necesidades">
+                        </div>
+                    </div>
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">2</span> Diseño conceptual</h3>
+                        <p>Se planifica la estructura y el contenido general del producto.</p>
+                        <ul class="tool-features">
+                            <li>Se elabora un guion o storyboard.</li>
+                            <li>Se define la navegación y la interacción del usuario.</li>
+                            <li>Se eligen los medios que se integrarán (texto, audio, video, etc.).</li>
+                        </ul>
+                        <div class="tarea-images">
+                            <img src="images/diseno.png" alt="Diseño conceptual">
+                        </div>
+                    </div>
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">3</span> Diseño gráfico y técnico</h3>
+                        <p>Se crea la apariencia visual y se diseña cómo funcionará la herramienta.</p>
+                        <ul class="tool-features">
+                            <li>Diseño de interfaz (UI) y experiencia de usuario (UX).</li>
+                            <li>Creación de elementos gráficos y animaciones.</li>
+                            <li>Elección de plataformas o tecnologías a utilizar.</li>
+                        </ul>
+                        <div class="tarea-images">
+                            <img src="images/diseno2.png" alt="Diseño gráfico">
+                        </div>
+                    </div>
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">4</span> Producción o desarrollo</h3>
+                        <p>Es la etapa de construcción. Todo lo planeado se convierte en realidad.</p>
+                        <ul class="tool-features">
+                            <li>Se integran los elementos multimedia.</li>
+                            <li>Se programan las funciones y la navegación.</li>
+                            <li>Se ensamblan los componentes en una herramienta funcional.</li>
+                        </ul>
+                        <div class="tarea-images">
+                            <img src="images/produccion.jpg" alt="Producción multimedia">
+                        </div>
+                    </div>
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">5</span> Pruebas y evaluación</h3>
+                        <p>Antes de lanzar el producto, se hacen pruebas para detectar errores o mejorar la experiencia.</p>
+                        <ul class="tool-features">
+                            <li>Pruebas técnicas (errores, velocidad, compatibilidad).</li>
+                            <li>Evaluación de usabilidad por parte de usuarios reales.</li>
+                            <li>Correcciones y ajustes.</li>
+                        </ul>
+                        <div class="tarea-images">
+                            <img src="images/pruebas.png" alt="Pruebas y evaluación">
+                        </div>
+                    </div>
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">6</span> Implementación o distribución</h3>
+                        <p>El producto se publica o entrega al público final.</p>
+                        <ul class="tool-features">
+                            <li>Puede subirse a una web, distribuirse en USB, CD, app store, etc.</li>
+                            <li>Se capacita a los usuarios si es necesario.</li>
+                        </ul>
+                        <div class="tarea-images">
+                            <img src="images/implementacion.jpg" alt="Implementación">
+                        </div>
+                    </div>
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">7</span> Mantenimiento y actualización</h3>
+                        <p>Una vez en uso, el producto puede requerir ajustes o mejoras.</p>
+                        <ul class="tool-features">
+                            <li>Actualización de contenidos.</li>
+                            <li>Corrección de errores detectados posteriormente.</li>
+                            <li>Adaptaciones para nuevas versiones de software o dispositivos.</li>
+                        </ul>
+                        <div class="tarea-images">
+                            <img src="images/actualizacion.jpg" alt="Mantenimiento">
+                        </div>
+                    </div>
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">8</span> Documentación</h3>
+                        <p>Se registra y organiza todo el proceso de desarrollo del producto multimedia.</p>
+                        <ul class="tool-features">
+                            <li>Creación de guías de usuario.</li>
+                            <li>Documentación técnica.</li>
+                            <li>Desarrollo de libros de estilo.</li>
+                            <li>Archivo de decisiones clave.</li>
+                        </ul>
+                        <div class="tarea-images">
+                            <img src="images/documentacion.jpg" alt="Documentación">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="highlight-box" style="margin-top: 40px;">
+                    <div class="highlight-icon"></div>
+                    <div class="highlight-content">
+                        <h4>Importancia del proceso estructurado</h4>
+                        <p>Estas fases garantizan que el producto multimedia final sea coherente, funcional y de alta calidad. Saltar etapas puede resultar en problemas de usabilidad, errores técnicos o falta de alineación con los objetivos iniciales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tarea-9 lenguajes de desarrollo web" class="tarea-section">
+    <div class="tarea-content container">
+        <div class="tarea-container">
+            <div class="tarea-text">
+                <h2>Lenguajes de desarrollo Web: HTML5, PHP, JavaScript, etc.</h2>
+                <p>
+                    Se conoce como desarrollo web al proceso de crear y mantener un sitio web que sea funcional en internet, a través de diferentes lenguajes de programación, según el modelo y la parte de la página que corresponda. Cada sitio tiene una URL única que lo distingue de los demás en la red informática mundial.
+                </p>
+
+                <div class="content-grid" style="grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">1</span> Frontend</h3>
+                        <p>Es la parte que interactúa con el usuario, tanto en imagen como en función. Por ello está íntimamente relacionada con la experiencia del usuario (UX) y la interfaz de usuario (UI).</p>
+                        
+                        <div class="software-section" style="margin-top: 20px;">
+                            <h4>Tecnologías principales:</h4>
+                            <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px;">
+                                <div class="tech-pill">
+                                    <img src="images/html5.png" alt="HTML5">
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="tech-pill">
+                                    <img src="images/css3.png" alt="CSS3">
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="tech-pill">
+                                    <img src="images/javascript.png" alt="JavaScript">
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="classification-card">
+                        <h3><span class="classification-number">2</span> Backend</h3>
+                        <p>Se refiere a la parte que está en contacto directo con el servidor; es donde se aplica el código de programación para crear la estructura. Permanece en un segundo plano a cargo de la accesibilidad, actualización, bases de datos y cambios del sitio.</p>
+                        
+                        <div class="software-section" style="margin-top: 20px;">
+                            <h4>Tecnologías principales:</h4>
+                            <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px;">
+                                <div class="tech-pill">
+                                    <img src="images/php.jpg" alt="PHP">
+                                    <span>PHP</span>
+                                </div>
+                                <div class="tech-pill">
+                                    <img src="images/node.png" alt="Node.js">
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="tech-pill">
+                                    <img src="images/python.png" alt="Python">
+                                    <span>Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 40px;">
+                    <div class="highlight-icon"></div>
+                    <div class="highlight-content">
+                        <h4>Aplicaciones Web de acceso restringido</h4>
+                        <p>Las aplicaciones Web de acceso restringido como son las intranets, mejoran las gestiones internas de una empresa como:</p>
+                        <ul>
+                            <li>• Reporte de horas de su personal</li>
+                            <li>• Gestión de proyectos y tareas</li>
+                            <li>• Control de presencia</li>
+                            <li>• Gestores documentales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="comparison-section" style="margin-top: 50px;">
+                    <h3>Comparativa Frontend vs Backend</h3>
+                    <div class="content-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px;">
+                        <div class="comparison-card" style="border-top: 4px solid #3a86ff;">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>Se ejecuta en el navegador del usuario</li>
+                                <li>Enfocado en la presentación y experiencia</li>
+                                <li>Lenguajes: HTML, CSS, JavaScript</li>
+                                <li>Frameworks: React, Angular, Vue</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-card" style="border-top: 4px solid #ff006e;">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>Se ejecuta en el servidor</li>
+                                <li>Enfocado en lógica y procesamiento</li>
+                                <li>Lenguajes: PHP, Python, Java, Node.js</li>
+                                <li>Frameworks: Laravel, Django, Express</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -881,7 +1148,7 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="unidad1.html">U1-Contexto MM</a></li>
                     <li><a href="unidad2.html">U2-Tecnol emergentes</a></li>
-                    <li><a href="#unidad3">U3-Desarrollo e integracion</a></li>
+                    <li><a href="#unidad3">U3-Drllo e integracion</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                 </ul>
             </div>
