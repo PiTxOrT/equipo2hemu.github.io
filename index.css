@@ -552,7 +552,6 @@ body {
     margin-top: 8px;
 }
 
-/* Estilos comparativa */
 .comparison-section {
     margin-top: 40px;
     padding-top: 30px;
@@ -640,7 +639,6 @@ body {
     border-radius: 6px;
 }
 
-/* Tarjetas temáticas */
 .education-card {
     border-top-color: #4cc9f0;
 }
@@ -665,7 +663,6 @@ body {
     border-top-color: #43aa8b;
 }
 
-/* Nota destacada */
 .highlight-box {
     display: flex;
     background-color: rgba(206, 150, 123, 0.1);
@@ -690,7 +687,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .applications-grid {
         grid-template-columns: 1fr;
@@ -707,7 +703,6 @@ body {
     }
 }
 
-/* Estilos para motores de videojuegos */
 .engine-comparison {
     display: grid;
     grid-template-columns: 1fr;
@@ -775,7 +770,6 @@ body {
     display: block;
 }
 
-/* Motores específicos */
 .unity-engine .engine-header {
     background-color: rgba(0, 138, 201, 0.1);
 }
@@ -784,7 +778,6 @@ body {
     background-color: rgba(0, 173, 188, 0.1);
 }
 
-/* Otros motores */
 .other-engines {
     margin: 50px 0 30px 0;
 }
@@ -829,7 +822,6 @@ body {
     left: 0;
 }
 
-/* Nota técnica */
 .tech-note {
     display: flex;
     background-color: rgba(206, 150, 123, 0.08);
@@ -847,6 +839,66 @@ body {
 
 .note-content {
     flex: 1;
+}
+
+.classification-row {
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.left-aligned {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.right-aligned {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.classification-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid #ce967b;
+    transition: transform 0.3s ease;
+}
+
+.classification-card:hover {
+    transform: translateY(-5px);
+}
+
+.classification-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #b87c63;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.classification-card .tarea-images img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .left-aligned, 
+    .right-aligned {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .classification-card {
+        max-width: 100%;
+    }
 }
 
 @keyframes highlightDivider {
@@ -1128,7 +1180,8 @@ body {
     margin-bottom: 15px;
 }
 
-/* Responsive */
+
+
 @media (max-width: 768px) {
     .content-grid {
         grid-template-columns: 1fr !important;
@@ -1139,6 +1192,187 @@ body {
     }
 }
 
+.software-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.software-card > div:first-child {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.software-card .tarea-images {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-top: 1px solid #eee;
+}
+
+.software-card .tarea-images img {
+    max-height: 180px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.software-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(206, 150, 123, 0.2);
+    border-color: #ce967b;
+}
+
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.tech-pill-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+
+.tech-pill {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    min-width: 0; /* Permite que los items se encogen */
+}
+
+.tech-pill img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.tech-pill span {
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .tech-pill-container {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tech-pill {
+        flex: 0 0 auto;
+        width: 120px;
+    }
+}
+
+.phases-alternate-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.classification-card {
+    position: relative;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+}
+
+/* Patrón zigzag con nth-child */
+.classification-card:nth-child(odd) {
+    margin-right: auto;
+    width: 90%;
+    border-left: 4px solid #ce967b;
+}
+
+.classification-card:nth-child(even) {
+    margin-left: auto;
+    width: 90%;
+    border-right: 4px solid #ce967b;
+}
+
+/* Contenido de las tarjetas */
+.classification-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.classification-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ce967b;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.tool-features {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.tool-features li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.tool-features li::before {
+    content: "•";
+    color: #ce967b;
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+}
+
+.tarea-images {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tarea-images img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .classification-card:nth-child(odd),
+    .classification-card:nth-child(even) {
+        width: 100%;
+        margin: 0;
+    }
+}
 
 @media (max-width: 991px) {
     .menu {
